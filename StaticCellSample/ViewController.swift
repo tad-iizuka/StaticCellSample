@@ -8,18 +8,25 @@
 
 import UIKit
 
+var propertyA = Bool()
+var propertyB = Int()
+
 class ViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
+	
+		propertyA = false
+		propertyB = 0
 	}
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
 	}
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		self.navigationItem.title = ""
+	}
 
 }
 
